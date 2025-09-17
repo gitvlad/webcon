@@ -17,3 +17,13 @@ BEGIN
   SELECT SCOPE_IDENTITY() AS NewID;
 END
 GO
+
+---------
+
+EXEC dbo.usp_InsertOceny
+  @Rating = {I:Rating},
+  @Ekspercka = {I:Ekspercka},
+  @Pokorekcie = {I:Pokorekcie},
+  @Podsumowanie = N'{I:Podsumowanie}',
+  @CK01 = {I:CK01};
+
